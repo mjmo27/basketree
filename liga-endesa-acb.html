@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liga ENDESA ACB </title>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+}
+
+/* ===== HEADER SUPERIOR ===== */
+
+.header {
+    background: linear-gradient(135deg, #0d2b52, #133b73);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.acb-title {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* ===== SECCIÓN LIGA COMPACTA PREMIUM ===== */
+
+.league-section {
+    background: linear-gradient(180deg, #133b73, #0d2b52);
+    color: white;
+    padding: 25px 20px;   /* MÁS COMPACTO */
+    text-align: center;
+}
+
+/* ===== BADGE NIVEL ===== */
+
+.league-level-top {
+    display: inline-block;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    padding: 8px 22px;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid white;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* ===== LÍNEA DIVISORIA ===== */
+
+.league-divider {
+    width: 120px;
+    height: 3px;
+    background: white;
+    margin: 15px auto 20px auto;
+    border-radius: 5px;
+}
+
+/* ===== LOGO + TITULO ===== */
+
+.league-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Logo */
+.league-logo {
+    width: 100px;  /* ligeramente más compacto */
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+}
+
+.sexo-logo {
+    width: 30px;  /* ligeramente más compacto */
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+}
+
+/* Título liga */
+.league-title {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.7);
+}
+
+/* ===== GRID EQUIPOS ===== */
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.team-card {
+    background: #0d2b52;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.team-card img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.team-name {
+    margin-top: 12px;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+}
+
+/* ===== LINKS INFERIORES ===== */
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 0;
+    background: #ffffff;
+}
+
+.links a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #0d2b52;
+    transition: color 0.3s;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid white;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.links a:hover {
+    color: #133b73;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    .league-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .league-logo {
+        width: 70px;
+    }
+
+    .league-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .teams-grid {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .team-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .team-name {
+        font-size: 14px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .links a {
+        margin: 0;
+        font-size: 16px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="league-section">
+
+    <div class="league-level-top">
+        🏆 NIVEL 1º - NACIONAL <img src="LOGO_Masculino_transparente1.png" class="sexo-logo">
+    </div>
+
+ <div class="league-divider"></div>
+
+    <div class="league-header">
+        <img src="LOGOS/ACB/LIGA_ENDESA.png" 
+             alt="Liga Endesa Logo" 
+             class="league-logo">
+        
+        <div class="league-title">
+            LIGA ENDESA ACB
+         </div>
+    </div>
+
+</div>
+</div><div class="teams-grid">
+
+    <div class="team-card" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/ACB/Real_Madrid_Logo.png" alt="Logo">
+        <div class="team-name">Real Madrid</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/ACB/FC_Barcelona.html'">
+        <img src="LOGOS/ACB/Barsa_Logo.png" alt="Logo">
+        <div class="team-name">FC Barcelona</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/ACB/Valencia_Basket.html'">
+        <img src="LOGOS/ACB/Valencia_Logo.png" alt="Logo">
+        <div class="team-name">Valencia Basket</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/ACB/Surne_Bilbao.html'">
+        <img src="LOGOS/ACB/SurneBilbao_Logo.png" alt="Logo">
+        <div class="team-name">Surne Bilbao</div>
+    </div>
+    
+    <div class="team-card" onclick="location.href='EQUIPOS/ACB/Baxi_Manresa.html'">
+        <img src="LOGOS/ACB/BAXI Manresa_Logo.png" alt="Logo">
+        <div class="team-name">Baxi Manresa</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Hiopos Lleida_Logo.png" alt="Logo">
+        <div class="team-name">Hiopos Lleida</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Joventut_Badalona_logo.png" alt="Logo">
+        <div class="team-name">Joventut Badalona</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Unicaja_Logo.png" alt="Logo">
+        <div class="team-name">Unicaja</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Kosner Baskonia_Logo.png" alt="Logo">
+        <div class="team-name">Kosner Baskonia</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Río Breogán_Logo.png" alt="Logo">
+        <div class="team-name">Río Breogán</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Basquet Girona_Logo.png" alt="Logo">
+        <div class="team-name">Basquet Girona</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Recoletas Salud San Pablo Burgos_Logo.png" alt="Logo">
+        <div class="team-name">Recoletas Salud San Pablo Burgos</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/UCAM Murcia_Logo.png" alt="Logo">
+        <div class="team-name">UCAM Murcia</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/La Laguna Tenerife_Logo.png" alt="Logo">
+        <div class="team-name">La Laguna Tenerife</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Casademont Zaragoza_Logo.png" alt="Logo">
+        <div class="team-name">Casademont Zaragoza</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Dreamland Gran Canaria.png" alt="Logo">
+        <div class="team-name">Dreamland Gran Canaria</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/Coviran Granada_Logo.png" alt="Logo">
+        <div class="team-name">Coviran Granada</div>
+    </div>
+
+    <div class="team-card">
+        <img src="LOGOS/ACB/MoraBanc Andorra_Logo.png" alt="Logo">
+        <div class="team-name">MoraBanc Andorra</div>
+    </div>
+
+</div>
+
+<div class="links">
+       <a href="https://acb.com/es/clasificacion?temporada=90&jornada=5884" target="_blank">
+             Clasificación 
+        </a>
+
+        <a href="https://acb.com/es/partidos" target="_blank">
+             Resultados 
+        </a>
+ 
+        <a href="https://www.acb.com/es/calendario?temporada=90" target="_blank">
+            Calendario
+        </a>
+</div>
+
+</body>
+</html>
