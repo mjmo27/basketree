@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Baloncesto España</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0d2f57;
+color:white;
+margin:0;
+}
+
+/* CABECERA */
+
+.header{
+text-align:center;
+padding:20px;
+font-size:26px;
+font-weight:bold;
+}
+
+/* ZONA FUTUROS FILTROS */
+
+.filtros{
+background:#173f6b;
+padding:20px;
+min-height:80px;
+}
+
+/* TABLA LIGAS */
+
+.tabla-ligas{
+width:95%;
+margin:auto;
+border-collapse:collapse;
+}
+
+.tabla-ligas td{
+border:1px solid rgba(255,255,255,0.3);
+padding:8px;
+}
+
+.nivel{
+width:60px;
+text-align:center;
+font-weight:bold;
+background:#244d78;
+}
+
+.titulo-nivel{
+background:#1c3f66;
+font-weight:bold;
+text-align:center;
+}
+
+.liga{
+padding-left:20px;
+}
+
+.liga a{
+color:#ffffff;
+text-decoration:none;
+}
+
+.liga a:hover{
+text-decoration:underline;
+color:#ffd700;
+}
+
+.subregion{
+width:180px;
+background:#1c3f66;
+font-weight:bold;
+}
+
+/* Logo */
+.league-logo {
+    width: 50px;  /* ligeramente más compacto */
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+COMPETICIÓN - LIGAS BALONCESTO DE ESPAÑA CATEGORÍA SENIOR
+</div>
+
+<div class="filtros">
+<!-- Aquí irán filtros cuando conectes PostgreSQL -->
+</div>
+
+<table class="tabla-ligas">
+
+<tr>
+<td class="nivel">1º</td>
+<td class="titulo-nivel">
+Asociación de Clubs de Baloncesto. ACB
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="liga-endesa-acb.html">Liga Endesa (ACB)</a>
+ <img src="LOGOS/ACB/LIGA_ENDESA.png"
+  alt="Liga Endesa Logo" 
+  class="league-logo">
+</td>
+</tr>
+
+<tr>
+<td class="nivel">2º</td>
+<td class="titulo-nivel">
+Federación Española de Baloncesto FEB
+</td>
+</tr>
+
+
+<tr>
+<td></td>
+<td class="liga"><a href="liga-primera-feb-ORO.html">Liga Primera FEB (ORO)</a>
+  <img src="LOGOS/PRIMERA FEB ORO/LIGA_PRIMERA FEB ORO.png"
+    alt="Liga Primera Feb Logo" 
+    class="league-logo">
+</td>
+</tr>
+
+<tr>
+<td class="nivel">3º</td>
+<td class="liga">
+<a href="liga-segunda-feb-PLATA.html">Liga Segunda FEB (PLATA)</a>
+  <img src="LOGOS/SEGUNDA FEB PLATA/LIGA_SEGUNDA FEB PLATA.png"
+    alt="Liga Segunda Feb Logo" 
+    class="league-logo">
+</td>
+</tr>
+
+<tr>
+<td class="nivel">4º</td>
+<td class="liga">
+<a href="liga-tercera-feb-EBA.html">Liga Tercera FEB (EBA)</a>
+  <img src="LOGOS/TERCERA FEB EBA/LIGA_TERCERA FEB EBA.png"
+     alt="Liga Tercera Feb Logo" 
+    class="league-logo">
+</td>
+</tr>
+
+<tr>
+<td class="nivel">5º</td>
+<td class="titulo-nivel">
+Primera División Nacional de Baloncesto – Federaciones Autonómicas
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Andaluza de Baloncesto (N1)</a>
+      <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Andaluza de Baloncesto\N1_Nacional_Logo.png"
+         alt="Primera División Andaluza N1_Nacional Logo" 
+         class="league-logo">
+      <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Andaluza de Baloncesto\Baloncesto_Andalucia_Logo.png"
+         alt="Baloncesto_Andalucia Logo" 
+         class="league-logo">
+      <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Andaluza de Baloncesto\FAB_Logo.jpg"
+         alt="Federación Andaluza Logo" 
+         class="league-logo">
+
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera Nacional Aragonesa (A1)</a></td>
+      </tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Asturias (FBPA Más)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Liga Balear</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Liga Canaria</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Castilla y León</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera Nacional Castilla-La Mancha</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Cataluña (SuperCopa)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera Nacional Madrileña (Liga VIPS)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Autonómica Galega</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Rioja</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Vasco-Navarra</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Murcia</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Primera División Comunidad Valenciana</a></td>
+</tr>
+
+<tr>
+<td class="nivel">6º</td>
+<td class="titulo-nivel">
+Ligas Autonómicas y Provinciales
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Delegación Almería Campeonato Provincial A</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Delegación Cádiz Campeonato Copa Andalucía A</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Delegación Córdoba Campeonato Provincial Especial</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Delegación Granada Campeonato Provincial Especial</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Delegación Huelva Campeonato Provincial Especial</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Delegación Jaén Campeonato Provincial Especial</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Delegación Málaga Campeonato Provincial</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td class="liga"><a href="#">Delegación Sevilla 1ª Campeonato Provincial</a></td>
+</tr>
+
+</table>
+
+</body>
+</html>
