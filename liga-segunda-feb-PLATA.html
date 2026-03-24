@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liga SEGUNDA FEB PLATA </title>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+}
+
+/* HEADER */
+.league-section {
+    background: linear-gradient(135deg, #0d2b52, #133b73);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.league-level-top {
+    display: inline-block;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    padding: 8px 22px;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid white;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.top-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:10px 0 5px;
+}
+
+.top-links a{
+    background:none;              /* 👈 sin fondo */
+    color:white;                 /* 👈 texto blanco */
+    padding:0;                   /* 👈 sin caja */
+    border:none;
+    text-decoration:none;
+    font-weight:900;             /* 👈 más negrita */
+    font-size:16px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.top-links a:hover{
+    color:#7df9ff;               /* 👈 efecto azul brillante */
+}
+
+
+.league-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.league-logo {
+    width: 100px;
+}
+
+.sexo-logo {
+    width: 30px;
+}
+
+.league-title {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.7);
+}
+
+/* CONTENEDOR */
+.contenedor-ligas{
+    padding:20px;
+}
+
+/* ESTE + OESTE */
+.ligas-dobles{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap:40px;
+
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* BLOQUE */
+.bloque-liga{
+    flex:1;
+    max-width:500px;
+}
+
+.titulo-liga{
+    text-align:center;
+    color:#1f3f63;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+/* GRID */
+.grid-equipos{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:15px;
+}
+
+/* TARJETA */
+.equipo{
+    background:#1f3f63;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    text-align:center;
+    font-size:13px;
+    font-weight: bold;
+    box-shadow:0 4px 8px rgba(0,0,0,0.3);
+    transition:0.3s;
+    cursor:pointer;
+    height:60px;              /* 👈 CLAVE */
+    display:flex;              /* 👈 CLAVE */
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    gap:8px;
+}
+
+.equipo div{
+    display:-webkit-box;
+    text-align:left;
+    line-height:1.1;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+}
+
+.equipo:hover{
+    transform:scale(1.05);
+    background:#2e5f93;
+}
+
+.equipo img{
+    width:35px;
+    height:35px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 6px;
+}
+
+/* ===== LINKS INFERIORES ===== */
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 0;
+    background: #ffffff;
+}
+
+.links a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #0d2b52;
+    transition: color 0.3s;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid white;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.links a:hover {
+    color: #133b73;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+
+    .ligas-dobles{
+        grid-template-columns: 1fr 1fr;
+        gap:15px;
+    }
+
+    .grid-equipos{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .league-header{
+        flex-direction:column;
+    }
+
+    .league-title{
+        font-size:24px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .grid-equipos{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="league-section">
+
+    <div class="league-level-top">
+        <span class="copa plata">🏆</span> 
+        NIVEL 3º - SEMI-NACIONAL <img src="LOGO_Masculino_transparente1.png" class="sexo-logo">
+    </div>
+
+<div class="top-links">
+       <a href="https://www.feb.es/segundafeb/clasificacion.aspx" target="_blank">Clasificación</a>
+       <a href="https://www.feb.es/segundafeb/resultados.aspx" target="_blank">Resultados</a>
+</div>
+
+    <div class="league-header">
+        <a href="https://www.feb.es/segundafeb/inicio.aspx" target="_blank"> 
+        <img src="LOGOS/SEGUNDA FEB PLATA/LIGA_SEGUNDA FEB PLATA.png" 
+             alt="Liga Segunda Feb Plata Logo" 
+             class="league-logo">
+        </a>
+        
+        <div class="league-title">
+            LIGA SEGUNDA FEB PLATA
+         </div>
+    </div>
+
+</div>
+
+<div class="contenedor-ligas">
+
+    <div class="ligas-dobles">
+
+<!-- LIGA ESTE -->
+<div class="bloque-liga">
+<h2 class="titulo-liga">Liga Regular Este</h2>
+<div class="grid-equipos">
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Proinbeni UPB Gandia.png" alt="Logo">
+        <div>Proinbeni UPB Gandía</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Amics Castelló.png" alt="Logo">
+        <div>Amics Castelló</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Lobe Huesca La Magia.png" alt="Logo">
+        <div>Lobe Huesca La Magia</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Bueno Arenas Albacete Basket.png" alt="Logo">
+        <div>Bueno Arenas Albacete</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Class Basquet Sant Antoni.png" alt="Logo">
+        <div>Class Basket Sant Antoni</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Spanish Basketball Academy.png" alt="Logo">
+        <div>Spanish Basketball Academy</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Club Esportiu Básquet Llíria.png" alt="Logo">
+        <div>Club Esportiu Bàsquet Llíria</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/C.B. Getafe.png" alt="Logo">
+        <div>CB Getafe</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/CBZ.png" alt="Logo">
+        <div>CBZ Azulejos Moncayo</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Maderas Sorli Benicarlo.png" alt="Logo">
+        <div>Maderas Sorli Benicarlo</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Sol Gironés Bisbal Básquet.png" alt="Logo">
+        <div>Sol Gironès Bisbal</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Ciudad Molina Basket.png" alt="Logo">
+        <div>Ciudad de Molina</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Homs U.E. Mataró.png" alt="Logo">
+        <div>Homs UE Mataró</div>
+</div>
+ <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Oca Global  C.B. Salou.png" alt="Logo">
+        <div>Oca Global CB Salou</div>
+</div>
+
+</div>
+</div>
+
+<!-- LIGA OESTE -->
+<div class="bloque-liga">
+<h2 class="titulo-liga">Liga Regular Oeste</h2>
+<div class="grid-equipos">
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Biele ISB.png" alt="Logo">
+        <div>Biele ISB</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/UEMC Baloncesto Valladolid.png" alt="Logo">
+        <div>UEMC Valladolid</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Coto Córdoba CB Segunda FEB.png" alt="Logo">
+        <div>Coto Córdoba</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Insolac Caja 87.png" alt="Logo">
+        <div>Insolac Caja 87</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/C.B. StarLabs Morón.png" alt="Logo">
+        <div>CB Morón</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Clínica Ponferrada SDP.png" alt="Logo">
+        <div>Clínica Ponferrada</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Club Baloncesto Toledo Basket.png" alt="Logo">
+        <div>Club Baloncesto Toledo</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Reina Proteínas Clavijo.jpg" alt="Logo">
+        <div>Reina Yogur Clavijo</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Cultural y Deportiva Leonesa.png" alt="Logo">
+        <div>Cultural Leonesa</div>
+</div>
+
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Cáceres Patrimonio de la Humanidad.png" alt="Logo">
+        <div>Cáceres Patrimonio</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Castillo de Gorraiz Valle Egüe.png" alt="Logo">
+        <div>Castillo de Gorraiz</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/LogroBasket Log17.png" alt="Logo">
+        <div>LogroBasket</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Círculo Gijón Baloncesto.png" alt="Logo">
+        <div>Círculo Gijón</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS/SEGUNDA FEB PLATA/Jaén Paraíso Interior CB.png" alt="Logo">
+        <div>Jaén Paraíso Interior</div>
+</div>
+
+</div>
+
+ 
+</body>
+</html>
