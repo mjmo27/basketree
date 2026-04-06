@@ -130,9 +130,24 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
     padding:2px;
 }
 
-@media (max-width: 900px){
+@media (max-width: 768px){
     .grupos{
         grid-template-columns: 1fr; /* 🔥 uno debajo de otro */
+    }
+    .league-header{
+        flex-direction: column;   /* 🔥 apilar */
+        gap:15px;
+        text-align:center;
+    }
+
+    .league-logo{
+        width:70px;   /* 🔥 más pequeños */
+    }
+
+    .league-title{
+        font-size:20px;      /* 🔥 mucho más compacto */
+        line-height:1.2;
+        word-break: normal;  /* 🔥 evita letras sueltas */
     }
 
     .equipos{
