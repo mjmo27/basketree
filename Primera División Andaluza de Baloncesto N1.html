@@ -131,29 +131,31 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
 }
 
 @media (max-width: 768px){
+
     .grupos{
-        grid-template-columns: 1fr; /* 🔥 uno debajo de otro */
-    }
-    .league-header{
-        flex-direction: column;   /* 🔥 apilar */
+        grid-template-columns: 1fr;
     }
 
-    .league-header img{
-        display:grid;
+    .league-header{
+        display:grid; /* 🔥 AQUÍ está la clave */
         grid-template-columns: repeat(3, auto);
         justify-content:center;
-        gap:10px;;
+        align-items:center;
+        gap:10px;
     }
+
     .league-logo{
-        width:60px;   /* 🔥 más pequeños */
+        width:60px;
     }
 
     .league-title{
-        grid-column: span 3; /* título debajo de los logos */
+        grid-column: span 3; /* 🔥 título debajo */
+        text-align:center;
+        font-size:20px;
     }
-    
+
     .equipos{
-        grid-template-columns: repeat(2, 1fr); /* 🔥 sigue en 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
