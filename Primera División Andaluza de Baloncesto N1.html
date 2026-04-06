@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIMERA DIVISIÓN ANDALUZA DE BALONCESTO (N1)</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+}
+
+.header {
+    background: linear-gradient(135deg, #0d2b52, #133b73);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.copa.bronce{
+color:#cd7f32;
+text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
+}
+
+.league-section {
+    background: linear-gradient(180deg, #133b73, #0d2b52);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.league-level-top {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 900;
+    padding: 8px 22px;
+    border: 2px solid white;
+    border-radius: 40px;
+    margin-bottom: 15px;
+}
+
+.top-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.top-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:900;
+}
+
+.league-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.league-logo { width: 100px; }
+.sexo-logo { width: 30px; }
+
+.league-title {
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.grupos{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 grupos iguales */
+    gap:30px;
+    max-width:1200px;
+    margin: 0 auto;
+}
+
+.grupo{
+    background: white;
+    padding:15px;
+    border-radius:12px;
+    display:flex;
+    flex-direction:column;
+    align-items:center; /* 🔥 CLAVE */
+}
+
+.equipos{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr); /* 🔥 2 columnas */
+    gap:10px;
+    flex:1; /* 🔥 rellena todo el alto */
+}
+
+.equipo{
+    background:#1f3f63;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight: bold;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+
+    transition: 
+        transform: translateY(-3px); /* más elegante que scale */
+        box-shadow 0.15s ease,
+        background 0.2s ease;
+}
+
+.equipo:hover{
+    transform:scale(1.05);
+    background:#2e5f93;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+
+/* efecto click */
+.equipo:active{
+    transform: scale(0.97);
+}
+
+.equipo img{
+    width:30px;
+    height:30px;
+    object-fit:contain;
+    background:white;
+    border-radius:4px;
+    padding:2px;
+}
+
+@media (max-width: 900px){
+    .grupos{
+        grid-template-columns: 1fr; /* 🔥 uno debajo de otro */
+    }
+
+    .equipos{
+        grid-template-columns: repeat(2, 1fr); /* 🔥 sigue en 2 columnas */
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="league-section">
+    <div class="league-level-top">
+        <span class="copa bronce">🏆</span>
+        NIVEL 5º - AUTONÓMICO
+        <img src="LOGO_Masculino_transparente1.png" class="sexo-logo">
+    </div>
+
+    <div class="top-links">
+        <a href="https://www.andaluzabaloncesto.org/competicion-2408/competiciones-fab-25-26" target="_blank">
+            Resultados y Clasificaciones
+        </a>
+    </div>
+
+    <div class="league-header">
+        <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/N1_Nacional_Logo.png" class="league-logo">
+        <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/Baloncesto_Andalucia_Logo.png" class="league-logo">
+        <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/FAB_Logo.jpg" class="league-logo">
+        <div class="league-title">Primera División Andaluza de Baloncesto</div>
+    </div>
+</div>
+
+        <div class="grupos">
+<!-- ===== GRUPO A ===== -->
+             <div class="grupo">
+               <h2>GRUPO A</h2>
+               <div class="equipos">
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/RC LABRADORES.jpg" alt="Logo"><div>RC LABRADORES</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/BARNETO MODAS LA PALMA 95.jpg" alt="Logo"><div>BARNETO MODAS LA PALMA 95</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CLUB NAUTICO SEVILLA.png" alt="Logo"><div>CLUB NAUTICO SEVILLA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/AD REM ONUBA.jpg" alt="Logo"><div>AD REM ONUBA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/AVATEL TELECOM ÉCIJA BASKET.jpg" alt="Logo"><div>AVATEL TELECOM ÉCIJA BASKET</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/XEREZ CLUB DEPORTIVO.png" alt="Logo"><div>XEREZ CLUB DEPORTIVO</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/Maquinarias del Odiel CB Gibraleón.jpg" alt="Logo"><div>Maquinarias del Odiel CB Gibraleón</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CB FRESAS - SAFA REYES SEVILLA.jpg" alt="Logo"><div>CB FRESAS - SAFA REYES SEVILLA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/IBERIAN INSURANCE GROUP CDBC PILAS.jpg" alt="Logo"><div>IBERIAN INSURANCE GROUP CDBC PILAS</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/ATICA SEVILLA CB CORIA.jpg" alt="Logo"><div>ATICA SEVILLA CB CORIA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CB CIUDAD DE PALOS.jpg" alt="Logo"><div>CB CIUDAD DE PALOS</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CD BALONCESTO HUELVA LA LUZ.png" alt="Logo"><div>CD BALONCESTO HUELVA LA LUZ</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CB LEPE ALIUS EL JAMÓN.jpg" alt="Logo"><div>CB LEPE ALIUS EL JAMÓN</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CIRCULO MERCANTIL E INDUSTRIAL
+.jpg" alt="Logo"><div>CIRCULO MERCANTIL E INDUSTRIAL</div></div>
+            </div>
+        </div>
+
+<!-- ===== GRUPO B ===== -->
+        <div class="grupo">
+            <h2>GRUPO B</h2>
+            <div class="equipos">
+                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/INVERMONEDA MÁLAGA ALHAURÍN (CBAT).png"><div>INVERMONEDA MÁLAGA ALHAURÍN (CBAT)</div></div>
+                <div class="equipo"onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CODIMAR BASKET GENIL.png"><div>CODIMAR BASKET GENIL</div></div>
+                <div class="equipo"onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/COTO CCB LUCENA.jpg"><div>COTO CCB LUCENA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CB CIMBIS SAN FERNANDO.jpg" alt="Logo"><div>CB CIMBIS SAN FERNANDO</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CB EL PALO - BASKET4LIFE.jpg" alt="Logo"><div>CB EL PALO - BASKET4LIFE</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/QUESERIA EL GAZUL ALCALA.jpg" alt="Logo"><div>QUESERIA EL GAZUL ALCALA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/VISOBATH AL-YUSSANA LUCENA.jpg" alt="Logo"><div>VISOBATH AL-YUSSANA LUCENA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CDB CABRA.jpg" alt="Logo"><div>CDB CABRA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CLAPIS TEATINOS MALAGA BASKET.jpg" alt="Logo"><div>CLAPIS TEATINOS MALAGA BASKET</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/EBG MÁLAGA.jpg" alt="Logo"><div>EBG MÁLAGA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/LA RAMBLA CIUDAD ALFARERA CÓRDOBA.jpg" alt="Logo"><div>LA RAMBLA CIUDAD ALFARERA CÓRDOBA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CB BENAHAVIS COSTA DEL SOL.jpg" alt="Logo"><div>CB BENAHAVIS COSTA DEL SOL</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CB BENALMADENA.jpg" alt="Logo"><div>CB BENALMADENA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/PARQUE COMERCIAL ENTREVIAS PUERTO REAL.jpg" alt="Logo"><div>PARQUE COMERCIAL ENTREVIAS PUERTO REAL</div></div>
+            </div>
+        </div>
+
+<!-- ===== GRUPO C ===== -->
+            <div class="grupo">
+            <h2>GRUPO C</h2>
+             <div class="equipos">
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CD ROQUETAS BC.jpg"><div>CD ROQUETAS BC</div></div>
+                <div class="equipo"onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/DESTINO VERA Ciudad de Vera.png"><div>DESTINO VERA Ciudad de Vera</div></div>
+                <div class="equipo"onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CAJA RURAL JAÉN C.B..png"><div>CAJA RURAL JAÉN C.B.</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/EIGRA GRUPO CB SANTA FE.png" alt="Logo"><div>EIGRA GRUPO CB SANTA FE</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/PINKBEAR BAZA.jpg" alt="Logo"><div>PINKBEAR BAZA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CD BALONCESTO ADRA 2012.jpg" alt="Logo"><div>CD BALONCESTO ADRA 2012</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/BLANQUEOS CLARES CB LA MOJONERA.jpg" alt="Logo"><div>BLANQUEOS CLARES CB LA MOJONERA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/RINCON SALUD 101 TORREBASKET.jpg" alt="Logo"><div>RINCON SALUD 101 TORREBASKET</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/UNICAJA.png" alt="Logo"><div>UNICAJA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/PC BOX GMASB.png" alt="Logo"><div>PC BOX GMASB</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/SEAT VIGILSA CAB ATARFE.jpg" alt="Logo"><div>SEAT VIGILSA CAB ATARFE</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/ESTUDIANTES HUERCAL DE ALMERIA.jpg" alt="Logo"><div>ESTUDIANTES HUERCAL DE ALMERIA</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/MAR INSTALACIONES FOTOVOLTAICAS LINABASKET CLUB.jpg" alt="Logo"><div>MAR INSTALACIONES FOTOVOLTAICAS LINABASKET CLUB</div></div>
+                <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+                 <img src="LOGOS/Primera División Nacional de Baloncesto – Federaciones Autonómicas/Primera División Andaluza de Baloncesto/CAMPOAMENO CB LA MOTA.jpg" alt="Logo"><div>CAMPOAMENO CB LA MOTA</div></div>
+            </div>
+        </div>
+
+</div>
+
+</body>
+</html>
