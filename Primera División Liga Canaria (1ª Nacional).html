@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primera División Liga Canaria (1ª Nacional) </title>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+}
+
+/* HEADER */
+.league-section {
+    background: linear-gradient(135deg, #0d2b52, #133b73);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.league-level-top {
+    display: inline-block;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    padding: 8px 22px;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid white;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.top-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:10px 0 5px;
+}
+
+.top-links a{
+    background:none;              /* 👈 sin fondo */
+    color:white;                 /* 👈 texto blanco */
+    padding:0;                   /* 👈 sin caja */
+    border:none;
+    text-decoration:none;
+    font-weight:900;             /* 👈 más negrita */
+    font-size:16px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.top-links a:hover{
+    color:#7df9ff;               /* 👈 efecto azul brillante */
+}
+
+
+.league-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.league-logo {
+    width: 100px;
+}
+
+.sexo-logo {
+    width: 30px;
+}
+
+.league-title {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.7);
+}
+
+/* CONTENEDOR */
+.contenedor-ligas{
+    padding:20px;
+}
+
+/* ESTE + OESTE */
+.ligas-dobles{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(600px, 1fr));
+    gap:40px;
+
+    max-width:1300px;
+    margin:0 auto;
+}
+
+/* BLOQUE */
+.bloque-liga{
+    flex:1;
+    max-width:500px;
+}
+
+.titulo-liga{
+    text-align:center;
+    color:#1f3f63;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+/* GRID */
+.grid-equipos{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:15px;
+}
+
+/* TARJETA */
+.equipo{
+    background:#1f3f63;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    text-align:center;
+    font-size:13px;
+    font-weight: bold;
+    box-shadow:0 4px 8px rgba(0,0,0,0.3);
+    transition:0.3s;
+    cursor:pointer;
+    height:60px;              /* 👈 CLAVE */
+    display:flex;              /* 👈 CLAVE */
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    gap:8px;
+}
+
+.equipo div{
+    display:-webkit-box;
+    text-align:left;
+    line-height:1.1;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+}
+
+.equipo:hover{
+    transform:scale(1.05);
+    background:#2e5f93;
+}
+
+.equipo img{
+    width:35px;
+    height:35px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 6px;
+}
+
+/* ===== LINKS INFERIORES ===== */
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 0;
+    background: #ffffff;
+}
+
+.links a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #0d2b52;
+    transition: color 0.3s;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid white;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.links a:hover {
+    color: #133b73;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+
+    .ligas-dobles{
+        grid-template-columns: 1fr 1fr;
+        gap:15px;
+    }
+
+    .grid-equipos{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .league-header{
+        flex-direction:column;
+    }
+
+    .league-title{
+        font-size:24px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .grid-equipos{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="league-section">
+
+    <div class="league-level-top">
+        <span class="copa plata">🏆</span> 
+        NIVEL 5º - AUTONÓMICO <img src="LOGO_Masculino_transparente1.png" class="sexo-logo">
+    </div>
+
+<div class="top-links">
+       <a href="https://gesdeportiva.fcbaloncesto.es/competiciones-6/FederacionCanaria" target="_blank">Clasificación</a>
+       <a href="https://gesdeportiva.fcbaloncesto.es/competiciones-6/FederacionCanaria" target="_blank">Resultados</a>
+</div>
+
+    <div class="league-header">
+        <a href="https://fcbaloncesto.es/" target="_blank"> 
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/FBC.jpg" class="league-logo">
+        </a>
+        
+        <div class="league-title">
+            PRIMERA DIVISIÓN LIGA CANARIA (1ª NACIONAL) 
+         </div>
+       </div>
+
+</div>
+
+<div class="contenedor-ligas">
+
+    <div class="ligas-dobles">
+
+<!-- GRUPO A -->
+<div class="bloque-liga">
+<h2 class="titulo-liga">GRUPO A</h2>
+<div class="grid-equipos">
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/C.B. Dadarmo De Güimar.jpg" alt="Logo">
+        <div>C.B. Dadarmo De Güimar</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Viajes Insular Juventud Laguna.jpg" alt="Logo">
+        <div>Viajes Insular Juventud Laguna</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/VulcanAloe Lanzarote Conejeros.jpg" alt="Logo">
+        <div>VulcanAloe Lanzarote Conejeros</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Joel Freeland Academy.jpg" alt="Logo">
+        <div>Joel Freeland Academy</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/C.B. Agüimes.jpg" alt="Logo">
+        <div>C.B. Agüimes</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Zamorales La Matanza.jpg" alt="Logo">
+        <div>Zamorales La Matanza</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Colegio Tacoronte.jpg" alt="Logo">
+        <div>Colegio Tacoronte</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Hortofrutícola Lanzarote Costa Teguise.jpg" alt="Logo">
+        <div>Hortofrutícola Lanzarote Costa Teguise</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/MG Canarias BSB.jpg" alt="Logo">
+        <div>MG Canarias BSB</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/SBT Maspalomas.jpg" alt="Logo">
+        <div>SBT Maspalomas</div>
+</div>
+
+</div>
+</div>
+
+<!-- GRUPO B -->
+<div class="bloque-liga">
+<h2 class="titulo-liga">GRUPO B</h2>
+<div class="grid-equipos">
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Evecan.jpg" alt="Logo">
+        <div>Evecan</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Capross Ciudad De Tacoronte.jpg" alt="Logo">
+        <div>Capross Ciudad De Tacoronte</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Fénix Disa Puertito de Güimar.jpg" alt="Logo">
+        <div>Fénix Disa Puertito de Güimar</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Hidroser C.B. Las Palmas de G.C..jpg" alt="Logo">
+        <div>Hidroser C.B. Las Palmas de G.C.</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/SD Tenisca.jpg" alt="Logo">
+        <div>SD Tenisca</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/CB 7 Palmas.jpg" alt="Logo">
+        <div>CB 7 Palmas</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/C.B. San Isidro Rosalesa.jpg" alt="Logo">
+        <div>C.B. San Isidro Rosalesa</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/Náutico Tenerife.jpg" alt="Logo">
+        <div>Náutico Tenerife</div>
+</div>
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/C.B. Aridane.jpg" alt="Logo">
+        <div>C.B. Aridane</div>
+</div>
+
+<div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Liga Canaria (1ª Nacional)/CB Telde.jpg" alt="Logo">
+        <div>CB Telde</div>
+</div>
+
+</div>
+
+ 
+</body>
+</html>
