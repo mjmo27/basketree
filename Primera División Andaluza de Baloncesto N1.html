@@ -135,23 +135,36 @@ body {
 
     .league-header{
         display:grid; /* 🔥 AQUÍ está la clave */
-        grid-template-columns: repeat(3, auto);
-        justify-content:center;
+        grid-template-columns: repeat(2, 1fr);/* 2 columnas */
         align-items:center;
         justify-items:center; /* 🔥 CLAVE */
         gap:10px;
     }
 
-    .league-logo{
-        width:60px;
-        display:block;
-        margin:0 auto; /* refuerzo extra */
+    /* Primer logo */
+    .league-logo:nth-of-type(1){
+    grid-column: 1;
+    grid-row: 1;
     }
 
-    .league-title{
-        grid-column: span 3; /* 🔥 título debajo */
-        text-align:center;
-        font-size:20px;
+    /* Segundo logo */
+   .league-logo:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 1;
+    }
+
+    /* Título */
+   .league-title{
+    grid-column: 1 / span 2; /* ocupa las 2 columnas */
+    grid-row: 2;
+    text-align:center;
+    font-size:20px;
+    }
+
+    /* Tercer logo */
+    .league-logo:nth-of-type(3){
+    grid-column: 1 / span 2; /* centrado debajo */
+    grid-row: 3;
     }
 
     .equipos{
