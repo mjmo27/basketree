@@ -32,6 +32,7 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
 
 .league-level-top {
     display: inline-block;
+    font-family: 'Trebuchet MS', sans-serif;
     font-size: 22px;
     font-weight: 900;
     padding: 8px 22px;
@@ -63,6 +64,7 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
 .sexo-logo { width: 30px; }
 
 .league-title {
+    font-family: 'Trebuchet MS', sans-serif;
     font-size: 34px;
     font-weight: 900;
 }
@@ -120,6 +122,21 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
 }
 
 @media (max-width: 768px){
+
+    .league-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .league-logo {
+        width: 70px;
+    }
+
+    .league-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
     .grupos{
         flex-direction: row;   /* mantener en horizontal */
         gap: 15px;
