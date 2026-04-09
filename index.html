@@ -97,6 +97,23 @@ cursor:pointer;
 background:#2e5f93;
 }
 
+.region{
+fill:#244d78;
+stroke:#ffffff;
+stroke-width:1.5;
+transition:all 0.2s ease;
+}
+
+.region:hover{
+fill:#ffd700;
+transform:scale(1.02);
+cursor:pointer;
+}
+
+.madrid{
+fill:#ff4d4d;
+}
+
 /* FUTUROS FILTROS */
 
 .filtros{
@@ -197,8 +214,9 @@ padding:20px;
 }
 
 .mapa-img{
-max-width:500px;
-width:90%;
+max-width:650px;
+width:95%;
+height:auto;
 }
 
 /* RESPONSIVE */
@@ -249,22 +267,96 @@ placeholder="Buscar club, equipo o liga..."
 
 <h3>Seleccionar comunidad</h3>
 
-<img src="mapa-espana.png" usemap="#mapaespana" class="mapa-img">
+<svg viewBox="0 0 800 650" class="mapa-img">
 
-<map name="mapaespana">
+<!-- CASTILLA Y LEÓN -->
+<path class="region" onclick="verLiga('castillayleon')" d="M240,160 L420,140 L480,240 L260,260 Z">
+<title>Castilla y León</title>
+</path>
 
-<area shape="rect" coords="120,220,220,320" href="#" onclick="verLiga('andalucia')">
-<area shape="rect" coords="250,120,350,200" href="#" onclick="verLiga('aragon')">
-<area shape="rect" coords="420,140,520,220" href="#" onclick="verLiga('cataluna')">
-<area shape="rect" coords="300,200,360,260" href="#" onclick="verLiga('madrid')">
+<!-- GALICIA -->
+<path class="region" onclick="verLiga('galicia')" d="M120,180 L200,150 L230,220 L150,250 Z">
+<title>Galicia</title>
+</path>
 
-</map>
+<!-- ASTURIAS -->
+<path class="region" onclick="verLiga('asturias')" d="M230,140 L300,130 L310,170 L240,180 Z">
+<title>Asturias</title>
+</path>
+
+<!-- CANTABRIA -->
+<path class="region" onclick="verLiga('cantabria')" d="M300,130 L360,130 L370,170 L310,170 Z">
+<title>Cantabria</title>
+</path>
+
+<!-- PAÍS VASCO -->
+<path class="region" onclick="verLiga('paisvasco')" d="M360,130 L440,140 L440,190 L370,170 Z">
+<title>País Vasco</title>
+</path>
+
+<!-- NAVARRA -->
+<path class="region" onclick="verLiga('navarra')" d="M440,140 L500,160 L490,210 L440,190 Z">
+<title>Navarra</title>
+</path>
+
+<!-- LA RIOJA -->
+<path class="region" onclick="verLiga('rioja')" d="M380,190 L440,190 L440,230 L380,230 Z">
+<title>La Rioja</title>
+</path>
+
+<!-- ARAGÓN -->
+<path class="region" onclick="verLiga('aragon')" d="M500,160 L600,180 L620,320 L520,300 Z">
+<title>Aragón</title>
+</path>
+
+<!-- CATALUÑA -->
+<path class="region" onclick="verLiga('cataluna')" d="M620,160 L760,220 L740,360 L620,320 Z">
+<title>Cataluña</title>
+</path>
+
+<!-- MADRID -->
+<circle cx="420" cy="300" r="10" class="region madrid" onclick="verLiga('madrid')">
+<title>Madrid</title>
+</circle>
+
+<!-- CASTILLA-LA MANCHA -->
+<path class="region" onclick="verLiga('clm')" d="M300,260 L560,260 L580,380 L320,380 Z">
+<title>Castilla-La Mancha</title>
+</path>
+
+<!-- EXTREMADURA -->
+<path class="region" onclick="verLiga('extremadura')" d="M220,260 L300,260 L300,380 L220,360 Z">
+<title>Extremadura</title>
+</path>
+
+<!-- COMUNIDAD VALENCIANA -->
+<path class="region" onclick="verLiga('valencia')" d="M560,320 L620,300 L640,420 L580,420 Z">
+<title>Comunidad Valenciana</title>
+</path>
+
+<!-- MURCIA -->
+<path class="region" onclick="verLiga('murcia')" d="M580,420 L640,420 L620,480 L560,470 Z">
+<title>Murcia</title>
+</path>
+
+<!-- ANDALUCÍA -->
+<path class="region" onclick="verLiga('andalucia')" d="M260,380 L580,380 L620,560 L300,600 Z">
+<title>Andalucía</title>
+</path>
+
+<!-- BALEARES -->
+<circle cx="700" cy="380" r="8" class="region" onclick="verLiga('baleares')">
+<title>Baleares</title>
+</circle>
+
+<!-- CANARIAS -->
+<circle cx="140" cy="600" r="8" class="region" onclick="verLiga('canarias')">
+<title>Canarias</title>
+</circle>
+
+</svg>
 
 </div>
-
-<div id="ligas-region"></div>
-
-<div id="ligas-region"></div>
 
 <div class="filtros">
 
@@ -375,7 +467,8 @@ Nivel 5 — Primeras Divisiones Autonómicas
 </div>
 <div class="liga"><a href="Primera División Liga Canaria (1ª Nacional).html">Primera División Canaria (1ª Nacional) (FBC) </a>
 </div>
-<div class="liga"><a href="#">Primera División Cántabra (1ªSM) (FCB) </a></div>
+<div class="liga"><a href="Primera División Nacional Cántabra  1ªSM.html">Primera División Cántabra (1ªSM) (FCB) </a>
+</div>
 <div class="liga"><a href="#">Primera División Castilla y León </a></div>
 <div class="liga"><a href="#">Primera Nacional Castilla-La Mancha (1º Nacional) (FBCLM)</a></div>
 <div class="liga"><a href="#">Primera División Cataluña (SuperCopa) (FCBQ)</a></div>
@@ -440,29 +533,58 @@ body.style.display = "block"
 </script>
 <script>
 
+const ligas = {
+
+andalucia: [
+"Primera División Andaluza",
+"Liga Provincial"
+],
+
+madrid: [
+"Liga VIPS",
+"1ª Autonómica"
+],
+
+cataluna: [
+"SuperCopa Cataluña",
+"Copa Cataluña"
+],
+
+valencia: [
+"Primera División Valenciana",
+"Liga Preferente"
+],
+
+aragon: [
+"Primera Aragonesa",
+"Segunda Aragonesa"
+],
+
+galicia: [
+"1ª División Galega",
+"Liga FGB"
+],
+
+castillayleon: [
+"Primera CyL",
+"Liga Provincial"
+]
+
+};
+
 function verLiga(region){
 
-let contenido=""
+let contenido = "<h3>Ligas</h3>";
 
-if(region=="andalucia"){
-
-contenido=`
-<a href="#">Primera División Andaluza</a><br>
-<a href="#">Liga Provincial Sevilla</a>
-`
-
+if(ligas[region]){
+ligas[region].forEach(liga=>{
+contenido += `<div class="liga"><a href="#">${liga}</a></div>`;
+});
+}else{
+contenido += "No disponible aún";
 }
 
-if(region=="aragon"){
-
-contenido=`
-<a href="#">Primera Aragonesa</a><br>
-<a href="#">Segunda Aragonesa</a>
-`
-
-}
-
-document.getElementById("ligas-region").innerHTML=contenido
+document.getElementById("ligas-region").innerHTML = contenido;
 
 }
 
