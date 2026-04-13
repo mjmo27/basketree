@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primera División Vasco-Navarra FNB y FVB</title>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+}
+
+/* ===== HEADER SUPERIOR ===== */
+
+.header {
+    background: linear-gradient(135deg, #0d2b52, #133b73);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.acb-title {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* ===== SECCIÓN LIGA COMPACTA PREMIUM ===== */
+
+.league-section {
+    background: linear-gradient(180deg, #133b73, #0d2b52);
+    color: white;
+    padding: 25px 20px;   /* MÁS COMPACTO */
+    text-align: center;
+}
+
+/* ===== BADGE NIVEL ===== */
+
+.league-level-top {
+    display: inline-block;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    padding: 8px 22px;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid white;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.top-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:10px 0 5px;
+}
+
+.top-links a{
+    background:none;              /* 👈 sin fondo */
+    color:white;                 /* 👈 texto blanco */
+    padding:0;                   /* 👈 sin caja */
+    border:none;
+    text-decoration:none;
+    font-weight:900;             /* 👈 más negrita */
+    font-size:16px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.top-links a:hover{
+    color:#7df9ff;               /* 👈 efecto azul brillante */
+}
+
+/* ===== LOGO + TITULO ===== */
+
+.league-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Logo */
+.league-logo {
+    width: 100px;  /* ligeramente más compacto */
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+}
+
+.sexo-logo {
+    width: 30px;  /* ligeramente más compacto */
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+}
+
+/* Título liga */
+.league-title {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.7);
+}
+
+/* ===== GRID EQUIPOS ===== */
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.team-card {
+    background: #0d2b52;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.team-card img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.team-name {
+    margin-top: 12px;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+}
+
+/* ===== LINKS INFERIORES ===== */
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 0;
+    background: #ffffff;
+}
+
+.links a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #f4f6f9;
+    transition: color 0.3s;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid white;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.links a:hover {
+    color: #133b73;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    .league-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .league-logo {
+        width: 70px;
+    }
+
+    .league-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .teams-grid {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .team-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .team-name {
+        font-size: 14px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .links a {
+        margin: 0;
+        font-size: 16px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="league-section">
+
+    <div class="league-level-top">
+        <span class="copa oro">🏆</span> 
+        NIVEL 5º - AUTONÓMICO <img src="LOGO_Masculino_transparente1.png" class="sexo-logo">
+    </div>
+
+<div class="top-links">
+       <a href="https://basketbasko.com/es/competicion-esf/" target="_blank">Clasificación</a>
+       <a href="https://www.fnbaloncesto.com/resultados-y-clasificaciones/" target="_blank">Resultados</a>
+</div>
+
+    <div class="league-header">
+        <a href="https://www.fnbaloncesto.com/" target="_blank">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\FNB.png" class="league-logo">
+        </a>
+        
+        <div class="league-title">
+            PRIMERA DIVISIÓN NACIONAL VASCO-NAVARRA FNB y FVB
+         </div>
+         <a href="https://basketbasko.com/es/federacion-vasca-de-baloncesto/" target="_blank">
+         <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\FVB.png" class="league-logo">
+    </div>
+
+</div>
+</div><div class="teams-grid">
+
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Estudiantes.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\TABIRAKO BAQUE.png" alt="Logo">
+        <div class="team-name">TABIRAKO BAQUE</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Flexicar_Fuenlabrada.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\SAN PRUDENCIO.png" alt="Logo">
+        <div class="team-name">SAN PRUDENCIO</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/LLOGROBASKET.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB/VASCONS GETXO.png" alt="Logo">
+        <div class="team-name">VASCONS GETXO</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Monbus Obradoiro.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\CB SANTURTZI SK.jpg" alt="Logo">
+        <div class="team-name">CB SANTURTZI SK</div>
+    </div>
+    
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/HLA_Alicante.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\EASO BASKET TURDUS.WINE.png" alt="Logo">
+        <div class="team-name">EASO BASKET TURDUS.WINE</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Súper Agropal Palencia.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\NAVASKET 1DM.jpg" alt="Logo">
+        <div class="team-name">NAVASKET 1DM</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Caja Rural CB Zamora.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\HYDROPYC URGATZI.jpg" alt="Logo">
+        <div class="team-name">HYDROPYC URGATZI</div>
+    </div>
+
+    <div class="team-card"onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Inveready Guipuzcoa San Sebastián Gipuzkoa Basket Club.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\LA SALLE VERSIA.png" alt="Logo">
+        <div class="team-name">LA SALLE VERSIA</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Fibwi Mallorca Basquet Palma.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\DISDIRA BITXITEGIA ISB.png" alt="Logo">
+        <div class="team-name">DISDIRA BITXITEGIA ISB</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Grupo Alega Cantabria.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\AISLA ARMETI IBAIZABAL.png" alt="Logo">
+        <div class="team-name">AISLA ARMETI IBAIZABAL</div>
+    </div>
+
+    <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Club Ourense Baloncesto.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\ASKARTZA CLARET.jpg" alt="Logo">
+        <div class="team-name">ASKARTZA CLARET</div>
+    </div>
+
+   <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Club Ourense Baloncesto.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\LEIOA SBT.png" alt="Logo">
+        <div class="team-name">LEIOA SBT</div>
+    </div>
+
+   <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Club Ourense Baloncesto.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\CASTILLO DE GORRAIZ VALLE DE EGÜES.png" alt="Logo">
+        <div class="team-name">CASTILLO DE GORRAIZ VALLE DE EGÜES</div>
+    </div>
+
+   <div class="team-card" onclick="location.href='EQUIPOS/PRIMERA FEB ORO/Club Ourense Baloncesto.html'">
+        <img src="LOGOS\Primera División Nacional de Baloncesto – Federaciones Autonómicas\Primera División Vasco-Navarra  FNB y FVB\ATLETICO SAN SEBASTIAN.jpg" alt="Logo">
+        <div class="team-name">ATLETICO SAN SEBASTIAN</div>
+    </div>
+
+    
+   </div>
+
+</body>
+</html>
