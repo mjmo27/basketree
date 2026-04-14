@@ -18,11 +18,6 @@ body {
     text-align: center;
 }
 
-.copa.bronce{
-color:#cd7f32;
-text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
-}
-
 .league-section {
     background: linear-gradient(180deg, #133b73, #0d2b52);
     color: white;
@@ -76,13 +71,19 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
 }
 
 .conferencia{ margin-bottom:40px; }
-.conferencia h2{ text-align:center; }
 .conferencia h3{ text-align:center; } 
 
 .grupos{
     display:flex;
     gap:40px;
     text-align:center;
+}
+
+.titulo-liga{
+    text-align:center;
+    color:#1f3f63;
+    margin-bottom:15px;
+    font-weight:bold;
 }
 
 .bloque-liga{ flex:1; }
@@ -177,13 +178,12 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
 <div class="contenedor-ligas">
 
 <!-- ===== CONFERENCIA A ===== -->
-<div class="conferencia">
-    <h2>CONFERENCIA A</h2> 
-    <h3>(Galicia, Asturias, Cantabria, Castilla y León, Navarra, La Rioja y País Vasco)</h3>
+    <h2 class="titulo-liga">CONFERENCIA A</h2> 
+    <h3 class="titulo-liga">(Galicia, Asturias, Cantabria, Castilla y León, Navarra, La Rioja y País Vasco)</h3>
     <div class="grupos">
 
         <div class="bloque-liga">
-            <h4>GRUPO A-A</h4>
+            <h4 class="titulo-liga">GRUPO A-A</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/Baskonia (Vitoria).png" alt="Logo"><div>Baskonia (Vitoria)</div></div>
@@ -217,7 +217,7 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
         </div>
 
         <div class="bloque-liga">
-            <h4>GRUPO A-B</h4>
+            <h4 class="titulo-liga">GRUPO A-B</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/Obradoiro Ames (A Coruña).png"><div>Obradoiro Ames (A Coruña)</div></div>
@@ -251,16 +251,15 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
         </div>
 
     </div>
-</div>
+
 
 <!-- ===== CONFERENCIA B ===== -->
-<div class="conferencia">
-    <h2>CONFERENCIA B</h2> 
-    <h3>(Canarias, Castilla-La Mancha y Madrid)</h3>
+    <h2 class="titulo-liga">CONFERENCIA B</h2> 
+    <h3 class="titulo-liga">(Canarias, Castilla-La Mancha y Madrid)</h3>
     <div class="grupos">
 
         <div class="bloque-liga">
-            <h4>GRUPO B-A</h4>
+            <h4 class="titulo-liga">GRUPO B-A</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/Náutico Tenerife.png"><div>Náutico Tenerife</div></div>
@@ -294,7 +293,7 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
         </div>
 
         <div class="bloque-liga">
-            <h4>GRUPO B-B</h4>
+            <h4 class="titulo-liga">GRUPO B-B</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/Uros de Rivas.png"><div>Uros de Rivas</div></div>
@@ -328,16 +327,15 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
         </div>
 
     </div>
-</div>
+
 
 <!-- ===== CONFERENCIA C ===== -->
-<div class="conferencia">
-    <h2>CONFERENCIA C</h2> 
-    <h3>(Aragón, Cataluña e Islas Baleares)</h3>
+    <h2 class="titulo-liga">CONFERENCIA C</h2> 
+    <h3 class="titulo-liga">(Aragón, Cataluña e Islas Baleares)</h3>
     <div class="grupos">
 
         <div class="bloque-liga">
-            <h4>GRUPO C-A</h4>
+            <h4 class="titulo-liga">GRUPO C-A</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/Pujol Mollerussa.jpg"><div>Pujol Mollerussa</div></div>
@@ -371,7 +369,7 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
         </div>
 
         <div class="bloque-liga">
-            <h4>GRUPO C-B</h4>
+            <h4 class="titulo-liga">GRUPO C-B</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/TQ-CB Prat.jpg"><div>TQ-CB Prat</div></div>
@@ -405,16 +403,14 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
         </div>
 
     </div>
-</div>
 
 <!-- ===== CONFERENCIA D ===== -->
-<div class="conferencia">
-    <h2>CONFERENCIA D</h2>
-    <h3>(Andalucía, Extremadura, Ceuta y Melilla)</h3>
+    <h2 class="titulo-liga">CONFERENCIA D</h2>
+    <h3 class="titulo-liga">(Andalucía, Extremadura, Ceuta y Melilla)</h3>
     <div class="grupos">
 
         <div class="bloque-liga">
-            <h4>GRUPO D-A</h4>
+            <h4 class="titulo-liga">GRUPO D-A</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/DamexCB Algeciras.jpg"><div>DamexCB Algeciras</div></div>
@@ -448,7 +444,7 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
         </div>
 
         <div class="bloque-liga">
-            <h4>GRUPO D-B</h4>
+            <h4 class="titulo-liga">GRUPO D-B</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/Vítaly La Mar BCBadajoz.jpg"><div>Vítaly La Mar BCBadajoz</div></div>
@@ -482,16 +478,14 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
         </div>
 
     </div>
-</div>
 
 <!-- ===== CONFERENCIA E ===== -->
-<div class="conferencia">
-    <h2>CONFERENCIA E</h2>
-    <h3>(Comunidad Valenciana y Región de Murcia)<h/3>
+    <h2 class="titulo-liga">CONFERENCIA E</h2>
+    <h3 class="titulo-liga">(Comunidad Valenciana y Región de Murcia)<h/3>
     <div class="grupos">
 
         <div class="bloque-liga">
-            <h4>GRUPO E-A</h4>
+            <h4 class="titulo-liga">GRUPO E-A</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/C.B. Puerto Sagunto.jpg"><div>C.B. Puerto Sagunto</div></div>
@@ -525,7 +519,7 @@ text-shadow:0 0 4px #b87333,0 0 8px #cd7f32;
         </div>
 
         <div class="bloque-liga">
-            <h4>GRUPO E-B</h4>
+            <h4 class="titulo-liga">GRUPO E-B</h4>
             <div class="grid-equipos">
                 <div class="equipo" onclick="location.href='EQUIPOS/ACB/Real_Madrid.html'">
                  <img src="LOGOS/TERCERA FEB EBA/Rigalli-Alginet.jpg"><div>Rigalli-Alginet</div></div>
